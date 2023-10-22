@@ -1,0 +1,112 @@
+/* LandingPage.css */
+
+/* Importing the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* A gentle gradient background */
+    overflow-x: hidden; /* Prevents any horizontal scrolling */
+    overflow-y: hidden;
+}
+
+
+.landingContainer {
+    max-width: 100vw;
+    height: 100vh;
+}
+
+.Toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header styles */
+.AppBar {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    color: #333; /* Dark text color for better visibility */
+}
+
+/* Button styles */
+button {
+    transition: 0.3s ease; /* Smooth transition for hover effects */
+}
+
+button:hover {
+    opacity: 0.8; /* Slight fade on hover for buttons */
+}
+
+/* Logo styling */
+.logoImage {
+    max-width: 100%; /* Makes sure the logo scales down on smaller screens */
+    height: auto;
+}
+
+.leftSide, .rightSide {
+    padding: 20px; /* Adding some padding around the content */
+}
+
+.leftSide {
+    max-width: 50%;
+}
+
+.rightSide {
+    max-width: 50%;
+    text-align: center; /* Centering the logo */
+}
+
+/* Adjustments for better spacing and organization */
+.leftSide > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* Adjust font sizes as needed for better responsiveness and presentation */
+.paynow-button {
+    background-color: #4CAF50;  /* A vibrant green color */
+    border: none;
+    color: white;               /* White text */
+    padding: 15px 30px;        /* Padding around text */
+    text-align: center;        
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;           /* Hand cursor on hover */
+    border-radius: 8px;        /* Rounded corners */
+    transition-duration: 0.4s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+.paynow-button:hover {
+    background-color: #45a049; /* A slightly darker green on hover */
+    color: white;
+}
+.ethereum-powered {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.ethereum-powered:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
