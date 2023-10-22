@@ -1,36 +1,105 @@
 .dashboard-container {
+    font-family: 'Arial', sans-serif;
     display: flex;
+    height: 100vh;
+    background: #f6f6f6;
 }
 
 .dashboard-navbar {
-    width: 200px;
     background-color: #333;
-    height: 100vh;
-    padding: 20px 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
 }
 
 .dashboard-navbar ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
 .dashboard-navbar li {
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 20px 0;
 }
 
 .dashboard-navbar a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
 .dashboard-navbar a:hover {
-    color: #00bcd4;
+    color: #007BFF;
 }
 
 .dashboard-content {
     flex: 1;
-    padding: 20px;
+    padding: 50px;
+    background: linear-gradient(135deg, #e0e7ff, #f6f6f6);
+}
+
+.dashboard-content h1 {
+    margin: 0;
+    color: #333;
+    font-size: 32px;
+}
+
+.add-employee {
+    max-width: 400px;
+    margin-top: 40px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.add-employee h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333;
+}
+
+.add-employee form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-employee input {
+    margin-bottom: 15px;
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+    font-size: 16px;
+}
+
+.add-employee input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.add-employee button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.2s;
+    font-size: 18px;
+}
+
+.add-employee button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.add-employee button:active {
+    transform: translateY(0);
+}
+.salary-input > span {
+    margin-right: 8px;
 }

@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
 function Dashboard() {
+    const [employee, setEmployee] = useState({
+        name: '',
+        position: '',
+        email: '',
+        walletAddress: '', 
+        salaryAmount: '', 
+    });
+
+    const handleChange = (e) => {
+        setEmployee({ ...employee, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(employee);
+        setEmployee({
+            name: '',
+            position: '',
+            email: '',
+            walletAddress: '',
+            salaryAmount: '',  
+        });
+    };
+
     return (
         <div className="dashboard-container">
             <div className="dashboard-navbar">
@@ -13,8 +37,52 @@ function Dashboard() {
                 </ul>
             </div>
             <div className="dashboard-content">
-                {/* Your dashboard content here */}
                 <h1>Welcome to [Company Name]</h1>
+
+                <div className="add-employee">
+                    <h2>Add Employee</h2>
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            value={employee.name}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="text"
+                            name="position"
+                            placeholder="Position"
+                            value={employee.position}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={employee.email}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="text"
+                            name="walletAddress"
+                            placeholder="Wallet Address"
+                            value={employee.walletAddress}
+                            onChange={handleChange}
+                        />
+                        <div className="salary-input">
+                            <span>$</span>
+                            <input
+                                type="number"
+                                name="salaryAmount"
+                                placeholder="Salary Amount"
+                                value={employee.salaryAmount}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <button type="submit">Add Employee</button>
+                    </form>
+                </div>
             </div>
         </div>
     );

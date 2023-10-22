@@ -51,7 +51,7 @@ function Login() {
             <input type="email" id="email" name="email" />
           </div>
           <div className="button-container"> 
-            <button type="button" onClick={handleLogin}>Login</button>
+            <button type="submit" onClick={handleLogin}>Login</button>
             <button type="button" className="connect-button" onClick={handleMetaMaskConnection}>
               {accountAddress || 'Connect MetaMask'}
             </button>
