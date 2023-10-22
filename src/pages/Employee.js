@@ -7,9 +7,8 @@ function Employees({ employees }) {
     // Handler for the Pay Now button
     const handlePayment = (employeeName) => {
         // Your payment logic here
-        alert(employeeName + ' has been paid.');
+        alert(employeeName + ' Open the metamask for the transaction.');
     };
-    const conversionRate = 0.003;
 
     return (
         <div className="employee-list">
@@ -44,8 +43,7 @@ function Employees({ employees }) {
                                     <td>{employee.position}</td>
                                     <td>{employee.email}</td>
                                     <td>{employee.walletAddress}</td>
-                                    <td>  ${employee.salaryAmount} 
-                                        (~{(employee.salaryAmount * conversionRate).toFixed(2)} ETH)</td>
+                                    <td>${employee.salaryAmount}</td>
                                     <td>Unpaid</td> {/* Default status */}
                                     <td>
                                     <button className="paynow-btn" onClick={() => handlePayment(employee.name)}>Pay Now</button>
