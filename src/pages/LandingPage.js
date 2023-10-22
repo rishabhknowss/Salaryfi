@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '/home/cheemu-rai/salaryfi/src/assests/images/logo.png';
 import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
 import './LandingPage.css'; 
@@ -24,7 +25,9 @@ function LandingPage() {
                     <Typography variant="h5" gutterBottom>
                         A modern payroll solution for remote work, providing secure, private salary payments.
                     </Typography>
-                    <button class="paynow-button">Pay Now</button>
+                    <Link to="/login"> {/* Use Link to navigate to the login page */}
+                        <button className="paynow-button">Pay Now</button>
+                    </Link>
 
                 </Box>
                 <div className="ethereum-powered">Powered by Ethereum</div>

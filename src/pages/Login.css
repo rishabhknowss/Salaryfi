@@ -1,0 +1,65 @@
+.login-container {
+    background-color: rgba(255, 255, 255, 0.85);  
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    padding: 30px 40px;   /* Adjusted padding for a larger box */
+    border-radius: 10px;
+    width: 350px;   /* Specified a fixed width for the login box */
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+}
+
+.form-group {
+    margin-bottom: 20px;  /* Increased margin for spacing between form elements */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;  /* Adjusted margin for a balanced look */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;   /* Increased padding for larger input fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Adjusted font size for the input */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 12px 25px;  /* Adjusted padding for a more prominent button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;           
+    border-radius: 8px;
+    transition-duration: 0.4s; 
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+    color: white;
+}
+.connect-button {
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
