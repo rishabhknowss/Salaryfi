@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 
-function Dashboard() {
+function Dashboard({ employees, setEmployees }) {
     const [employee, setEmployee] = useState({
         name: '',
         position: '',
         email: '',
-        walletAddress: '', 
-        salaryAmount: '', 
+        walletAddress: '',
+        salaryAmount: '',
     });
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setEmployee({ ...employee, [e.target.name]: e.target.value });
@@ -17,14 +19,16 @@ function Dashboard() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(employee);
+        const newEmployee = { ...employee };
+        setEmployees([...employees, newEmployee]);
         setEmployee({
             name: '',
             position: '',
             email: '',
             walletAddress: '',
-            salaryAmount: '',  
+            salaryAmount: '',
         });
+        navigate('/employees');
     };
 
     return (
