@@ -1,3 +1,4 @@
+![Screenshot from 2023-10-22 16-05-57](https://github.com/rishabhknowss/Salaryfi/assets/97790876/816f749b-69e7-44ca-9155-8e4002f2de10)
 
 # Salaryfi
 
